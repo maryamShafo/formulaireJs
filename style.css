@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond douce */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container du formulaire */
+.container {
+    background-color: #fff; /* Fond blanc pour le formulaire */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease; /* Animation de zoom */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Légère mise en avant au survol */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Texte gris foncé */
+    margin-bottom: 20px;
+}
+
+/* Style pour chaque groupe de champs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #555; /* Texte gris moyen */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style des champs de formulaire */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordure gris clair */
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa; /* Fond très clair */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animation de survol */
+}
+
+/* Effet de survol sur les champs */
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Bordure bleue au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre bleue légère */
+    outline: none; /* Supprimer le contour par défaut */
+}
+
+/* Style pour le bouton */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF; /* Bleu vif */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation du bouton */
+}
+
+/* Effet de survol pour le bouton */
+button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: translateY(-2px); /* Léger mouvement vers le haut */
+}
+
+/* Style pour les messages d'erreur */
+.error {
+    color: #e74c3c; /* Rouge vif */
+    font-size: 0.85em;
+    display: none;
+    margin-top: 5px;
+}
+
+/* Style pour les animations de transition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.6s ease-out; /* Animation d'apparition du formulaire */
+}
+
+input, textarea {
+    animation: fadeIn 0.6s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+button {
+    animation: fadeIn 0.6s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+
